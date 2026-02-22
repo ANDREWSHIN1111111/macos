@@ -3,7 +3,9 @@ services:
     image: dockurr/macos
     container_name: macos
     environment:
-      VERSION: "14"
+      VERSION: "26"
+      CPU_CORES: "10"
+      RAM_SIZE: "50G"
     devices:
       - /dev/kvm
       - /dev/net/tun
@@ -16,4 +18,4 @@ services:
     volumes:
       - ./macos:/storage
     restart: always
-    stop_grace_period: 2m
+    stop_grace_period: 60m
