@@ -8,8 +8,8 @@ set -Eeuo pipefail
 : "${MAC:=""}"               # MAC address
 : "${UUID:=""}"              # Unique ID
 : "${VERSION:=""}"           # OSX Version
-: "${WIDTH:="1920"}"         # Horizontal
-: "${HEIGHT:="1080"}"        # Vertical
+: "${WIDTH:="1680"}"         # Horizontal
+: "${HEIGHT:="1050"}"        # Vertical
 : "${MODEL:="iMacPro1,1"}"   # Device model
 
 BASE_IMG_ID="InstallMedia"
