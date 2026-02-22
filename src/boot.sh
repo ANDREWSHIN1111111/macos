@@ -14,15 +14,15 @@ html "$msg"
 [[ "$DEBUG" == [Yy1]* ]] && echo "$msg"
 
 case "${HEIGHT,,}" in
-  "1080" )
+  "1050" )
     DEST="$PROCESS"
     ROM="OVMF_CODE.fd"
-    VARS="OVMF_VARS-1920x1080.fd"
+    VARS="OVMF_VARS-1680x1050.fd"
     ;;
   "768" )
     DEST="${PROCESS}_hd"
     ROM="OVMF_CODE.fd"
-    VARS="OVMF_VARS-1024x768.fd"
+    VARS="OVMF_VARS-1680x1050.fd"
     ;;
   *)
     ROM="OVMF_CODE.fd"
@@ -110,7 +110,7 @@ if [ ! -f "$IMG" ]; then
   sed -r -i -e 's|<string>iMacPro1,1</string>|<string>'"${MODEL}"'</string>|g' "$CFG"
   sed -r -i -e 's|<string>C02TM2ZBHX87</string>|<string>'"${SN}"'</string>|g' "$CFG"
   sed -r -i -e 's|<string>C02717306J9JG361M</string>|<string>'"${MLB}"'</string>|g' "$CFG"
-  sed -r -i -e 's|<string>1920x1080@32</string>|<string>'"${RESOLUTION}"'</string>|g' "$CFG"
+  sed -r -i -e 's|<string>1680x1050@32</string>|<string>'"${RESOLUTION}"'</string>|g' "$CFG"
   sed -r -i -e 's|<string>007076A6-F2A2-4461-BBE5-BAD019F8025A</string>|<string>'"${UUID}"'</string>|g' "$CFG"
 
   # Build image
