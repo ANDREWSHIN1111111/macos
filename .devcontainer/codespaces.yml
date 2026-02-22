@@ -6,6 +6,8 @@ services:
       RAM_SIZE: "half"
       DISK_SIZE: "max"
       CPU_CORES: "max"
+      WIDTH: "1680"
+      HEIGHT: "1050"
     devices:
       - /dev/kvm
       - /dev/net/tun
