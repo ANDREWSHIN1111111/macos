@@ -6,6 +6,8 @@ services:
       VERSION: "26"
       CPU_CORES: "10"
       RAM_SIZE: "50G"
+      WIDTH: "1680"
+      HEIGHT: "1050"
     devices:
       - /dev/kvm
       - /dev/net/tun
